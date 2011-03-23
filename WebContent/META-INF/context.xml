@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context path="/PortalExample" docBase="./PortalExample" debug="1" reloadable="true">
+	
+	<Environment name="logName" value="japs" type="java.lang.String" override="false" />
+	<Environment name="logFilePrefix" value="/home/eu/workspace/PortalExample/build/temp/portalExample_log" type="java.lang.String" override="false" />
+	<Environment name="logLevel" value="ALL" type="java.lang.String" override="false" />
+	<Environment name="logFileSize" value="200000" type="java.lang.String" override="false" />
+	<Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
+	
+	<Environment name="configVersion" value="production" type="java.lang.String" override="false" />
+	
+	<Environment name="applicationBaseURL" value="http://localhost:8080/PortalExample/" type="java.lang.String" override="false" />
+	<Environment name="resourceRootURL" value="/PortalExample/resources/" type="java.lang.String" override="false" />
+	<Environment name="protectedResourceRootURL" value="/PortalExample/protected/" type="java.lang.String" override="false" />
+	
+	<Environment name="resourceDiskRootFolder" value="/home/eu/workspace/PortalExample/WebContent/resources/" type="java.lang.String" override="false" />
+	<Environment name="protectedResourceDiskRootFolder" value="/home/eu/workspace/PortalExample/WebContent/protected/" type="java.lang.String" override="false" />
+	
+	<Environment name="indexDiskRootFolder" value="/home/eu/workspace/PortalExample/build/temp/indexdir" type="java.lang.String" override="false" />
+	
+	<Environment name="cacheDiskRootFolder" value="/home/eu/workspace/PortalExample/build/temp/cache" type="java.lang.String" override="false" />
+	
+	<Resource name="jdbc/portDataSource" auth="Container" 
+		type="javax.sql.DataSource" driverClassName="org.postgresql.Driver" 
+		maxActive="8" maxIdle="4" 
+		username="agile" password="agile" 
+		url="jdbc:postgresql://localhost:5432/PortalExamplePort" />
+	
+	<Resource name="jdbc/servDataSource" auth="Container" 
+		type="javax.sql.DataSource" driverClassName="org.postgresql.Driver" 
+		maxActive="8" maxIdle="4" 
+		username="agile" password="agile" 
+		url="jdbc:postgresql://localhost:5432/PortalExampleServ" />
+	
+</Context>
