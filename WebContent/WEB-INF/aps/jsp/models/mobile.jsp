@@ -1,43 +1,39 @@
 <%@ taglib prefix="wp" uri="aps-core.tld" %>
-<wp:contentNegotiation mimeType="application/xhtml+xml" charset="utf-8"/>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
- "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<%@ taglib prefix="c" uri="c.tld" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<wp:info key="currentLang" />">
-<head>
-	<title>
-		Mobile @ jAPS Portal Example| <wp:currentPage param="title" />
-	</title>
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1 user-scalable=no,width = 320" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	<title>Mobile @ jAPS Portal Example| <wp:currentPage param="title" /></title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+</head> 
+<body> 
 
-<link rel="stylesheet" type="text/css" href="<wp:cssURL />mobile/PortalExampleMobile.css" />
-<link rel="stylesheet" type="text/css" href="<wp:cssURL />mobile/pagemodels/general.css" />
-
-	<wp:outputHeadInfo type="CSS"> 
-		<link rel="stylesheet" type="text/css" href="<wp:cssURL />mobile/<wp:printHeadInfo />" />
-	</wp:outputHeadInfo> 
-
-</head>
-<body>
-
-	<div id="header">
+<div data-role="page" data-theme="b" data-url="${pageURL}">
+	<div data-role="header" data-position="inline">
 		<h1><wp:i18n key="MAIN_TITLE" /></h1>
-	</div>
-<div id="subheader">
-	<div id="subheader1">
+		<a href="<wp:url page="mobile_home" />" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+	</div> 
+	<div data-role="content">
 		<wp:show frame="0" />
-	</div>
-	<div id="subheader2">
 		<wp:show frame="1" />
-	</div>
-</div>
-	<div id="main">
 		<wp:show frame="2" />
 		<wp:show frame="3" />
 		<wp:show frame="4" />
 		<wp:show frame="5" />
 		<wp:show frame="6" />
 		<wp:show frame="7" />
-	</div>
-<jsp:include page="inc/footer.jsp" />
+	</div> 
+	<div data-role="footer">
+		<h2><wp:i18n key="COPYRIGHT" escapeXml="false" /></h2>
+		<h2><wp:i18n key="CREDITS_POWERED_BY" escapeXml="false" /></h2>
+	</div> 
+</div>
 </body>
 </html>

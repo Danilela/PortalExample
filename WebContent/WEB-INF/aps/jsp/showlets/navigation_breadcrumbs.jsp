@@ -10,8 +10,35 @@
 */  		
 %>
 <wp:currentPage param="code" var="currentViewCode" />
+<c:set var="isMobile"><wp:currentPage param="childOf" targetPage="mobile" /></c:set>
 
-<p><wp:i18n key="YOU_ARE_HERE" />:
+<c:choose>
+	<c:when test="${isMobile == true}">	
+	<div data-role="collapsible" data-collapsed="true" >
+	<h3><wp:i18n key="YOU_ARE_HERE" /></h3>
+	
+	<ul data-role="listview" data-inset="true">
+		<wp:nav spec="current.path" var="currentTarget">	
+			<c:set var="currentCode"><c:out value="${currentTarget.code}" /></c:set>
+			<c:choose>
+				<c:when test="${!currentTarget.voidPage}">
+					<c:choose>
+						<c:when test="${currentCode == currentViewCode}">
+							<li><c:out value="${currentTarget.title}" /></li>
+						</c:when>
+						<c:otherwise>
+							<li><a href="<c:out value="${currentTarget.url}" />"><c:out value="${currentTarget.title}" /></a></li>
+						</c:otherwise>
+					</c:choose>
+				</c:when>
+				<c:otherwise><li><c:out value="${currentTarget.title}" /></li></c:otherwise>
+			</c:choose>
+		</wp:nav>
+	</ul>	
+	</div>
+	</c:when>
+	<c:otherwise>
+	<p><wp:i18n key="YOU_ARE_HERE" />:
 	<c:set var="first" value="true" />
 	<wp:nav spec="current.path" var="currentTarget">
 		<c:set var="currentCode"><c:out value="${currentTarget.code}" /></c:set>
@@ -31,5 +58,7 @@
 		</c:choose>
 		<c:set var="first" value="false" />
 	</wp:nav>
-</p>
+	</p>
+	</c:otherwise>
+</c:choose>
 

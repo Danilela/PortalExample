@@ -8,16 +8,14 @@
 	Showlet che mostra il menù di navigazione verticale.
 */
 %>
-
+<c:set var="isMobile"><wp:currentPage param="childOf" targetPage="mobile" /></c:set>
 <wp:headInfo type="CSS" info="showlets/navigation_menu.css" />
 
 <div class="navigation_menu">
 <c:set var="prev" value="-1" />
-
 <wp:currentPage param="code" var="currentViewCode" />
 <c:set var="startClosing" value="0" />	
-
-<ul class="menuRoot">
+<ul class="menuRoot" <c:if test="${isMobile == true}">data-role="listview" data-inset="true"</c:if>>
 <wp:nav var="currentTarget">
 	<c:set var="current"><c:out value="${currentTarget.level}" /></c:set>
 	<c:set var="currentCode"><c:out value="${currentTarget.code}" /></c:set>
@@ -34,7 +32,7 @@
 			</c:choose>
 		</c:when>
 		<c:otherwise>
-				<li><span class="title"><c:out value="${currentTarget.title}" /></span>
+				<li <c:if test="${isMobile == true}">data-role="list-divider"</c:if>><span class="title"><c:out value="${currentTarget.title}" /></span>
 		</c:otherwise>
 	</c:choose>
 	<c:set var="prev"><c:out value="${currentTarget.level}" /></c:set>
