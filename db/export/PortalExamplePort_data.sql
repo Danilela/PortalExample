@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-02-05 12:29:29 CET
+-- Started on 2011-04-25 17:05:00 CEST
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1823 (class 0 OID 356625)
+-- TOC entry 1823 (class 0 OID 1092635)
 -- Dependencies: 1503
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -84,7 +84,7 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('tributi', 'moduli'
 
 
 --
--- TOC entry 1824 (class 0 OID 356631)
+-- TOC entry 1824 (class 0 OID 1092641)
 -- Dependencies: 1504
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -278,7 +278,7 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 
 
 --
--- TOC entry 1825 (class 0 OID 356637)
+-- TOC entry 1825 (class 0 OID 1092647)
 -- Dependencies: 1505
 -- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -379,10 +379,11 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG145', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG145', NULL, NULL, '144', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG146', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG148', NULL, NULL, NULL, NULL, 'free');
 
 
 --
--- TOC entry 1826 (class 0 OID 356640)
+-- TOC entry 1826 (class 0 OID 1092650)
 -- Dependencies: 1506
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -756,10 +757,39 @@ eParticipation is about reconnecting ordinary people with politics and policy-ma
 The portal implements the paradigm of participation and collaboration to knowledge and information sharing through highly interactive and accessible services.</p>
 <p>&nbsp;</p>]]></hypertext></attribute><attribute name="Immagine_1" attributetype="Image" /><attribute name="Immagine_2" attributetype="Image" /><list attributetype="Monolist" name="Riferimenti" nestedtype="Link" /><list attributetype="Monolist" name="Allegati" nestedtype="Attach" /></attributes><status>DRAFT</status><version>3.0</version></content>
 ', 'free', '3.0', 'admin');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG148', 'CNG', 'Intro Home per Credenziali', 'DRAFT', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG148" typecode="CNG" typedescr="Contenuto generico"><descr>Intro Home per Credenziali</descr><groups mainGroup="free" /><categories /><attributes><attribute name="Titolo" attributetype="Text"><text lang="it">Come loggarsi</text><text lang="en">How to sign in</text></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Cosa aspetti? Prova l''Area di Amministrazione!&#xD;
+Scegli il link "Avanzata" e scopri la nuova veste grafica.&#xD;
+Scopri quante cose puoi personalizzare, crea un nuovo contenuto, una nuova pagina o magari il tuo utente personale.&#xD;
+Entra con Username: admin e Passowrd: adminadmin e poi fai quello che vuoi tu.</text><text lang="en">What are you waiting for? Try the Administration Area!&#xD;
+Choose the "Advanced" link and enjoy the new design.&#xD;
+Find out how many things you can customize, create new content, a new page or even your own user.&#xD;
+Sign in with Username: admin and Password: adminadmin and then do what you want.</text></attribute><attribute name="CorpoTesto" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p>Cosa aspetti? Prova l''Area di Amministrazione!</p>
+<p>Scegli il link &quot;Avanzata&quot; e scopri la nuova veste grafica.</p>
+<p>Scopri quante cose puoi personalizzare, crea un nuovo contenuto, una nuova pagina o magari il tuo utente personale.</p>
+<p>Entra con Username: admin e Passowrd: adminadmin e poi fai quello che vuoi tu.</p>]]></hypertext><hypertext lang="en"><![CDATA[<p>What are you waiting for? Try the Administration Area!</p>
+<p>Choose the &quot;Advanced&quot; link and enjoy the new design.</p>
+<p>Find out how many things you can customize, create new content, a new page or even your own user.</p>
+<p>Sign in with Username: admin and Password: adminadmin and then do what you want.</p>]]></hypertext></attribute><attribute name="Immagine_1" attributetype="Image" /><attribute name="Immagine_2" attributetype="Image" /><list attributetype="Monolist" name="Riferimenti" nestedtype="Link" /><list attributetype="Monolist" name="Allegati" nestedtype="Attach" /></attributes><status>DRAFT</status><version>7.0</version></content>
+', '20110415113006', '20110415120449', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG148" typecode="CNG" typedescr="Contenuto generico"><descr>Intro Home per Credenziali</descr><groups mainGroup="free" /><categories /><attributes><attribute name="Titolo" attributetype="Text"><text lang="it">Come loggarsi</text><text lang="en">How to sign in</text></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Cosa aspetti? Prova l''Area di Amministrazione!&#xD;
+Scegli il link "Avanzata" e scopri la nuova veste grafica.&#xD;
+Scopri quante cose puoi personalizzare, crea un nuovo contenuto, una nuova pagina o magari il tuo utente personale.&#xD;
+Entra con Username: admin e Passowrd: adminadmin e poi fai quello che vuoi tu.</text><text lang="en">What are you waiting for? Try the Administration Area!&#xD;
+Choose the "Advanced" link and enjoy the new design.&#xD;
+Find out how many things you can customize, create new content, a new page or even your own user.&#xD;
+Sign in with Username: admin and Password: adminadmin and then do what you want.</text></attribute><attribute name="CorpoTesto" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p>Cosa aspetti? Prova l''Area di Amministrazione!</p>
+<p>Scegli il link &quot;Avanzata&quot; e scopri la nuova veste grafica.</p>
+<p>Scopri quante cose puoi personalizzare, crea un nuovo contenuto, una nuova pagina o magari il tuo utente personale.</p>
+<p>Entra con Username: admin e Passowrd: adminadmin e poi fai quello che vuoi tu.</p>]]></hypertext><hypertext lang="en"><![CDATA[<p>What are you waiting for? Try the Administration Area!</p>
+<p>Choose the &quot;Advanced&quot; link and enjoy the new design.</p>
+<p>Find out how many things you can customize, create new content, a new page or even your own user.</p>
+<p>Sign in with Username: admin and Password: adminadmin and then do what you want.</p>]]></hypertext></attribute><attribute name="Immagine_1" attributetype="Image" /><attribute name="Immagine_2" attributetype="Image" /><list attributetype="Monolist" name="Riferimenti" nestedtype="Link" /><list attributetype="Monolist" name="Allegati" nestedtype="Attach" /></attributes><status>DRAFT</status><version>7.0</version></content>
+', 'free', '7.0', 'admin');
 
 
 --
--- TOC entry 1827 (class 0 OID 356646)
+-- TOC entry 1827 (class 0 OID 1092656)
 -- Dependencies: 1507
 -- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -831,10 +861,12 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG145', 'Titolo', 'Accessibilità', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG146', 'Titolo', 'ePartecipation', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG146', 'Titolo', 'ePartecipation', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG148', 'Titolo', 'How to sign in', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG148', 'Titolo', 'Come loggarsi', NULL, NULL, 'it');
 
 
 --
--- TOC entry 1828 (class 0 OID 356649)
+-- TOC entry 1828 (class 0 OID 1092659)
 -- Dependencies: 1508
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -979,10 +1011,26 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('COPYRIGHT', '
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('COPYRIGHT', 'it', '<span lang="en">Copyright &copy; Tzente srl 2011</span>');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('CREDITS_POWERED_BY', 'en', '<span lang="en">Powered by </span><a href="http://www.japsportal.org/"><span lang="en">jAPS 2.0 entando &ndash; Java Agile Portal System, version 2.2</span></a>');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('CREDITS_POWERED_BY', 'it', '<span lang="en">Powered by </span><a href="http://www.japsportal.org/"><span lang="en">jAPS 2.0 entando &ndash; Java Agile Portal System, version 2.2</span></a>');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('PAGE_DETAILS', 'en', 'Page Details');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('PAGE_DETAILS', 'it', 'Dettagli della Pagina');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('EDIT_THIS_PAGE', 'en', 'Manage this Page');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('EDIT_THIS_PAGE', 'it', 'Gestione Pagina');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('DATE_FROM', 'en', 'From');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('DATE_FROM', 'it', 'Da');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('DATE_TO', 'en', 'To');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('DATE_TO', 'it', 'A');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('TEXT', 'en', 'Text');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('TEXT', 'it', 'Testo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ALL', 'en', 'All');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ALL', 'it', 'Tutte');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NUMBER_FROM', 'en', 'From');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NUMBER_FROM', 'it', 'Da');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NUMBER_TO', 'en', 'To');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NUMBER_TO', 'it', 'A');
 
 
 --
--- TOC entry 1829 (class 0 OID 356655)
+-- TOC entry 1829 (class 0 OID 1092665)
 -- Dependencies: 1509
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1127,7 +1175,7 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('mobile', 'Mobi
 
 
 --
--- TOC entry 1830 (class 0 OID 356661)
+-- TOC entry 1830 (class 0 OID 1092671)
 -- Dependencies: 1510
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1452,7 +1500,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1831 (class 0 OID 356667)
+-- TOC entry 1831 (class 0 OID 1092677)
 -- Dependencies: 1511
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1460,7 +1508,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1832 (class 0 OID 356670)
+-- TOC entry 1832 (class 0 OID 1092680)
 -- Dependencies: 1512
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1528,7 +1576,7 @@ INSERT INTO resources (resid, restype, descr, maingroup, xml, masterfilename) VA
 
 
 --
--- TOC entry 1833 (class 0 OID 356676)
+-- TOC entry 1833 (class 0 OID 1092686)
 -- Dependencies: 1513
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1608,18 +1656,6 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	<parameter name="modelId">Content Model ID</parameter>
 	<action name="viewerConfig"/>
 </config>', 'jacms', NULL, NULL, 1);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked) VALUES ('content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Contents - Publish a List of Contents</property>
-<property key="it">Contenuti - Pubblica una Lista di Contenuti</property>
-</properties>', '<config>
-	<parameter name="contentType">Content Type (mandatory)</parameter>
-	<parameter name="modelId">Content Model</parameter>
-	<parameter name="category">Content Category</parameter>
-	<parameter name="maxElemForItem">Contents for each page</parameter>
-	<parameter name="filters" />
-	<action name="listViewerConfig"/>
-</config>', 'jacms', NULL, NULL, 1);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked) VALUES ('formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Internal Servlet</property>
@@ -1630,10 +1666,27 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	</parameter>
 	<action name="configSimpleParameter"/>
 </config>', NULL, NULL, NULL, 1);
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked) VALUES ('content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Contents - Publish a List of Contents</property>
+<property key="it">Contenuti - Pubblica una Lista di Contenuti</property>
+</properties>', '<config>
+	<parameter name="contentType">Content Type (mandatory)</parameter>
+	<parameter name="modelId">Content Model</parameter>
+	<parameter name="userFilters">Front-End user filter options</parameter>
+	<parameter name="category">Content Category **deprecated**</parameter>
+	<parameter name="categories">Content Category codes (comma separeted)</parameter>
+	<parameter name="maxElemForItem">Contents for each page</parameter>
+	<parameter name="filters" />
+	<parameter name="title_{lang}">Showlet Title in lang {lang}</parameter>
+	<parameter name="pageLink">The code of the Page to link</parameter>
+	<parameter name="linkDescr_{lang}">Link description in lang {lang}</parameter>
+	<action name="listViewerConfig"/>
+</config>', 'jacms', NULL, NULL, 1);
 
 
 --
--- TOC entry 1834 (class 0 OID 356682)
+-- TOC entry 1834 (class 0 OID 1092692)
 -- Dependencies: 1514
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2165,12 +2218,19 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 ', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 6, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
+<property key="contentId">CNG148</property>
+<property key="modelId">12</property>
+</properties>
+
+', 'CNG148');
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 7, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
 <property key="contentId">CNG51</property>
 <property key="modelId">12</property>
 </properties>
 
 ', 'CNG51');
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 7, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 8, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="contentId">CNG145</property>
 <property key="modelId">12</property>
@@ -2180,7 +2240,7 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 
 --
--- TOC entry 1835 (class 0 OID 356688)
+-- TOC entry 1835 (class 0 OID 1092698)
 -- Dependencies: 1515
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2400,16 +2460,16 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 
 
 --
--- TOC entry 1836 (class 0 OID 356694)
+-- TOC entry 1836 (class 0 OID 1092704)
 -- Dependencies: 1516
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 147);
+INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 148);
 
 
 --
--- TOC entry 1837 (class 0 OID 356697)
+-- TOC entry 1837 (class 0 OID 1092707)
 -- Dependencies: 1517
 -- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2437,7 +2497,7 @@ INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('DLB36', 'deli
 
 
 --
--- TOC entry 1838 (class 0 OID 356700)
+-- TOC entry 1838 (class 0 OID 1092710)
 -- Dependencies: 1518
 -- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2509,9 +2569,11 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG145', 'Titolo', 'Accessibilità', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG146', 'Titolo', 'ePartecipation', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG146', 'Titolo', 'ePartecipation', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG148', 'Titolo', 'How to sign in', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG148', 'Titolo', 'Come loggarsi', NULL, NULL, 'it');
 
 
--- Completed on 2011-02-05 12:29:30 CET
+-- Completed on 2011-04-25 17:05:00 CEST
 
 --
 -- PostgreSQL database dump complete
