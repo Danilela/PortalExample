@@ -4,8 +4,22 @@ body {
 }
 
 
-/* Toolbar */
+/* Toolbars */
 
+.bar-content-edit {
+	background: #f1f3f1;
+}
+
+.bar-content-edit p {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+
+.bar-content-edit a {
+	text-decoration: none;
+}
+	
 #bar-page-edit {
 	/* commonly used */
 	position: fixed;
