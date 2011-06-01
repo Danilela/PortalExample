@@ -66,8 +66,8 @@
 	var myModalLightFace = null;
 window.addEvent('domready', function() {
 //domready
-	var downloadTitleString = "Download as VM file";
-	var closeTitleString = "Close";
+	var downloadTitleString = "<s:text name="label.download" />";
+	var closeTitleString = "<s:text name="label.close" />";
 	
 	var details_shortcut = document.id("jacms-content-model-detail-shortcut");
 
@@ -112,7 +112,7 @@ window.addEvent('domready', function() {
 		buttons: [
 			{ title: downloadTitleString },
 			{
-				title: 'Close', 
+				title: closeTitleString, 
 				event: function() { 
 					this.close(); 
 				} 
