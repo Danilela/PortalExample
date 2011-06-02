@@ -4,7 +4,8 @@
 
 <jacms:contentInfo param="authToEdit" var="canEditThis" />
 <jacms:contentInfo param="contentId" var="myContentId" />
-
+<c:set var="isMobile"><wp:currentPage param="childOf" targetPage="mobile" /></c:set>
+<c:if test="${isMobile != true}">
 <c:if test="${canEditThis}">
 	<div class="bar-content-edit">
 		<p>
@@ -16,5 +17,5 @@
 		</p>
 	</div>
 </c:if>
-
+</c:if>
 <jacms:content publishExtraTitle="true" />

@@ -51,6 +51,15 @@ form {
 	padding: 0;
 }
 
+form label {
+	font-weight: bold;
+}
+
+form legend {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
 input.text {
 	border: 1px solid #333333;
 	width: 7em;
@@ -62,6 +71,11 @@ input.button {
 	color: #333333;*/
 	background-color: #0f4780;
 	color: #ffffff;
+}
+
+select {
+	border: 1px solid #333333;
+	background-color: #ffffff;
 }
 
 a:link, a:visited {
@@ -166,4 +180,18 @@ table caption {
 
 .bolded {
 	font-weight: bold;
+}
+
+p.paginazione {
+	text-align: center;
+}
+
+div.search_box {
+	padding: 0.5em;
+	border-top: 2px solid #ffffff;
+	background-color: #f1f3f1;
+}
+
+form.plugins input.text {
+	width: 15em;
 }

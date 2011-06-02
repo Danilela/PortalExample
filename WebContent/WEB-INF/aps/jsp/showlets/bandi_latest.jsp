@@ -22,10 +22,9 @@
 
 <ul>
 <c:if test="${contentList != null}">
-        <c:forEach var="content" items="${contentList}" begin="0" end="2">
-                <li><jacms:content contentId="${content}" modelId="41" /></li>
-        </c:forEach>
+	<c:forEach var="content" items="${contentList}" begin="0" end="2">
+		<li><jacms:content contentId="${content}" modelId="41" /></li>
+	</c:forEach>
 </c:if>        
 </ul>
-<!-- <h3 class="archivio"><a href="<wp:url page="notizie" />" title="<wp:i18n key="VAI_PAGINA"/>:<wp:i18n key="ARCHIVIO_NOTIZIE"/>"><wp:i18n key="ARCHIVIO_NOTIZIE"/></a></h3> -->
 </div>

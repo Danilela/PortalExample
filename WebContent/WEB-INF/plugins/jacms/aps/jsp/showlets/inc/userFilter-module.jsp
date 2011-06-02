@@ -15,7 +15,7 @@
 			<c:if test="${null != userFilterOptionVar.formFieldErrors}">
 			<c:forEach var="formFieldError" items="${userFilterOptionVar.formFieldErrors}">
 			<li>
-			<wp:i18n key="jacms_LIST_VIEWER_FIELD" />&#32;<em><c:out value="${formFieldError.value.attributeName}" /></em><c:if test="${formFieldError.value.rangeFieldType != null}">:&#32;<em><wp:i18n key="${formFieldError.value.rangeFieldType}" /></em></c:if>&#32;<wp:i18n key="${formFieldError.value.errorKey}" />
+			<wp:i18n key="jacms_LIST_VIEWER_FIELD" />&#32;<em class="bolded"><c:out value="${formFieldError.value.attributeName}" /></em><c:if test="${formFieldError.value.rangeFieldType != null}">:&#32;<em class="bolded"><wp:i18n key="${formFieldError.value.rangeFieldType}" /></em></c:if>&#32;<wp:i18n key="${formFieldError.value.errorKey}" />
 			</li>
 			</c:forEach>
 			</c:if>
@@ -24,43 +24,46 @@
 </c:if>
 <c:set var="hasUserFilterError" value="${false}" />
 
+<h3><wp:i18n key="SEARCH_FOR" />:</h3>
 <%-- search form with user filters --%>
 <form action="<wp:url />" method="post">
 	<c:forEach var="userFilterOptionVar" items="${userFilterOptionsVar}">
 		<c:set var="userFilterOptionVar" value="${userFilterOptionVar}" scope="request" />
 		<c:choose>
 			<c:when test="${!userFilterOptionVar.attributeFilter && (userFilterOptionVar.key == 'fulltext' || userFilterOptionVar.key == 'category')}">
-				<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-${userFilterOptionVar.key}.jsp" />
+				<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-${userFilterOptionVar.key}.jsp" /></div>
 			</c:when>
 			<c:when test="${userFilterOptionVar.attributeFilter}">
 				<c:choose>
 					<c:when test="${userFilterOptionVar.attribute.type == 'Monotext' || userFilterOptionVar.attribute.type == 'Text' || userFilterOptionVar.attribute.type == 'Longtext' || userFilterOptionVar.attribute.type == 'Hypertext'}">
-						<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Text.jsp" />
+						<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Text.jsp" /></div>
 					</c:when>
 					<c:when test="${userFilterOptionVar.attribute.type == 'Enumerator' }">
-						<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Enumerator.jsp" />
+						<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Enumerator.jsp" /></div>
 					</c:when>
 					<c:when test="${userFilterOptionVar.attribute.type == 'Number'}">
-						<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Number.jsp" />
+						<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Number.jsp" /></div>
 					</c:when>
 					<c:when test="${userFilterOptionVar.attribute.type == 'Date'}">
-						<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Date.jsp" />
+						<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Date.jsp" /></div>
 					</c:when>
 					<c:when test="${userFilterOptionVar.attribute.type == 'Boolean' }">
-						<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Boolean.jsp" />
+						<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-Boolean.jsp" /></div>
 					</c:when>
 					<c:when test="${userFilterOptionVar.attribute.type == 'CheckBox'}">
-						<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-CheckBox.jsp" />
+						<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-CheckBox.jsp" /></div>
 					</c:when>
 					<c:when test="${userFilterOptionVar.attribute.type == 'ThreeState'}">
-						<c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-ThreeState.jsp" />
+						<div class="search_box"><c:import url="/WEB-INF/plugins/jacms/aps/jsp/showlets/inc/userFilter-module-entity-ThreeState.jsp" /></div>
 					</c:when>
 				</c:choose>
 			</c:when>
 		</c:choose>
 	</c:forEach>
+	<div class="search_box">
 	<p>
 		<input type="submit" value="<wp:i18n key="SEARCH" />" class="button" />
 	</p>
+	</div>
 </form>
 </c:if>
