@@ -15,27 +15,29 @@
 <c:set var="prev" value="-1" />
 <wp:currentPage param="code" var="currentViewCode" />
 <c:set var="startClosing" value="0" />	
+
 <ul class="menuRoot" <c:if test="${isMobile == true}">data-role="listview" data-inset="true"</c:if>>
 <wp:nav var="currentTarget">
 	<c:set var="current"><c:out value="${currentTarget.level}" /></c:set>
 	<c:set var="currentCode"><c:out value="${currentTarget.code}" /></c:set>
-	
-	<c:if test="${current == prev}"></li></c:if>
-	<c:if test="${current < prev}"></li></ul></li></c:if>
-	<c:if test="${(current > prev) && (current != 0)}"><ul></c:if>	
-	
-	<c:choose>
-		<c:when test="${!currentTarget.voidPage}">		
-			<c:choose>
-				<c:when test="${currentCode == currentViewCode}"><li><span class="current"><c:out value="${currentTarget.title}" /></span></c:when>
-				<c:otherwise><li><span><a href="<c:out value="${currentTarget.url}" />" title="<wp:i18n key="VAI_PAGINA" />: <c:out value="${currentTarget.title}" />"><c:out value="${currentTarget.title}" /></a></span></c:otherwise>
-			</c:choose>
-		</c:when>
-		<c:otherwise>
-				<li <c:if test="${isMobile == true}">data-role="list-divider"</c:if>><span class="title"><c:out value="${currentTarget.title}" /></span>
-		</c:otherwise>
-	</c:choose>
-	<c:set var="prev"><c:out value="${currentTarget.level}" /></c:set>
+	<c:if test="${currentCode == 'homepage'}"><span class="noscreen"></c:if>
+		<c:if test="${current == prev}"></li></c:if>
+		<c:if test="${current < prev}"></li></ul></li></c:if>
+		<c:if test="${(current > prev) && (current != 0)}"><ul <c:if test="${isMobile == true}">data-role="listview" data-inset="true"</c:if>></c:if>	
+		
+		<c:choose>
+			<c:when test="${!currentTarget.voidPage}">		
+				<c:choose>
+					<c:when test="${currentCode == currentViewCode}"><li><span class="current"><c:out value="${currentTarget.title}" /></span></c:when>
+					<c:otherwise><li><span><a href="<c:out value="${currentTarget.url}" />" title="<wp:i18n key="VAI_PAGINA" />: <c:out value="${currentTarget.title}" />"><c:out value="${currentTarget.title}" /></a></span></c:otherwise>
+				</c:choose>
+			</c:when>
+			<c:otherwise>
+					<li <c:if test="${isMobile == true}">data-role="list-divider"</c:if>><span class="title"><c:out value="${currentTarget.title}" /></span>
+			</c:otherwise>
+		</c:choose>
+		<c:set var="prev"><c:out value="${currentTarget.level}" /></c:set>
+	<c:if test="${currentCode == 'homepage'}"></span></c:if>	
 </wp:nav>
 <c:if test="${prev==0}"></li></ul></c:if>
 <c:if test="${prev<0}"></ul></c:if>
