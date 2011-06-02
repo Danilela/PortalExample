@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-06-02 19:59:23 CEST
+-- Started on 2011-06-02 21:47:48 CEST
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -1092,6 +1092,32 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NUMBER_TO', '
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NUMBER_TO', 'it', 'A');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('EDIT_THIS_CONTENT', 'en', 'Edit this Content');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('EDIT_THIS_CONTENT', 'it', 'Modifica il Contenuto');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCH_FOR', 'en', 'Search for');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCH_FOR', 'it', 'Cerca per');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('YES', 'en', 'Yes');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('YES', 'it', 'Si');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NO', 'en', 'No');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NO', 'it', 'No');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('BOTH', 'en', 'Both');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('BOTH', 'it', 'Entrambi');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('IGNORE', 'en', 'Ignore this field');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('IGNORE', 'it', 'Ignora questo campo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('CATEGORY', 'en', 'Category');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('CATEGORY', 'it', 'Categoria');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ERRORS', 'en', 'Errors');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ERRORS', 'it', 'Errori');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('LIST_VIEWER_EMPTY', 'en', 'No results found. Check your search filters.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('LIST_VIEWER_EMPTY', 'it', 'Nessun risultato trovato. Controlla i tuoi filtri di ricerca.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('END', 'en', 'To');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('END', 'it', 'Fino a');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('START', 'en', 'From');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('START', 'it', 'Da');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_INVALID_FORMAT', 'en', 'has a format that is not valid.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_INVALID_FORMAT', 'it', 'ha un formato che risulta non valido.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_INVALID_RANGE', 'en', 'has a value not consistent. Check and start a new search.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_INVALID_RANGE', 'it', 'ha un valore non coerente. Ricontrolla ed effettua una nuova ricerca.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_FIELD', 'en', 'The field');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_FIELD', 'it', 'Il campo');
 
 
 --
@@ -2978,7 +3004,7 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('SDL46', 'Oggetto', 'Tributi - Richiesta rimborso ICI', NULL, NULL, 'it');
 
 
--- Completed on 2011-06-02 19:59:23 CEST
+-- Completed on 2011-06-02 21:47:49 CEST
 
 --
 -- PostgreSQL database dump complete

@@ -1,3 +1,5 @@
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCH_FOR', 'en', 'Search for');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCH_FOR', 'it', 'Cerca per');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('YES', 'en', 'Yes');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('YES', 'it', 'Si');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NO', 'en', 'No');
